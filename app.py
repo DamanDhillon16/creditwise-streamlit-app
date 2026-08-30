@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
+from pathlib import Path
 
 # -----------------------------------------------------------------
 # Page config
@@ -16,8 +17,12 @@ st.set_page_config(
 # Load custom CSS
 # -----------------------------------------------------------------
 def load_css(file_path: str):
-    with open(file_path) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    css_path = Path(__file__).parent / file_path
+    if css_path.exists():
+        with open(css_path) as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    else:
+        st.warning(f"⚠️ Could not find {file_path} — running with default styling.")
 
 load_css("style.css")
 
@@ -26,13 +31,14 @@ load_css("style.css")
 # -----------------------------------------------------------------
 @st.cache_resource
 def load_artifacts():
-    model = joblib.load("model.joblib")
-    scaler = joblib.load("scaler.joblib")
-    ohe = joblib.load("ohe.joblib")
-    le_education = joblib.load("le_education.joblib")
-    le_target = joblib.load("le_target.joblib")
-    feature_columns = joblib.load("feature_columns.joblib")
-    ohe_cols = joblib.load("ohe_cols.joblib")
+    base = Path(__file__).parent
+    model = joblib.load(base / "model.joblib")
+    scaler = joblib.load(base / "scaler.joblib")
+    ohe = joblib.load(base / "ohe.joblib")
+    le_education = joblib.load(base / "le_education.joblib")
+    le_target = joblib.load(base / "le_target.joblib")
+    feature_columns = joblib.load(base / "feature_columns.joblib")
+    ohe_cols = joblib.load(base / "ohe_cols.joblib")
     return model, scaler, ohe, le_education, le_target, feature_columns, ohe_cols
 
 model, scaler, ohe, le_education, le_target, feature_columns, ohe_cols = load_artifacts()
