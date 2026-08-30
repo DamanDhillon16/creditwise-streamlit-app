@@ -2,7 +2,7 @@
 
 A live, interactive web app that predicts loan approval using a Logistic Regression model trained on applicant financial data. This is the deployable companion to the [CreditWise ML notebook project](#) — same model, same preprocessing pipeline, wrapped in a simple UI.
 
-🔗 **Live demo:** `<add your Streamlit Cloud link here after deployment>`
+🔗 **Live demo:** `https://creditwise-app-app-dcwxxnp6za9kb3pqfcs7gd.streamlit.app/`
 
 ## 🖥️ What it does
 
