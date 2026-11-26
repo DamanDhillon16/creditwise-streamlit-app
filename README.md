@@ -2,7 +2,7 @@
 
 A machine learning project that predicts whether a loan application will be approved, comparing Logistic Regression, KNN and Naive Bayes. The best model is served through a Streamlit app.
 
-**Live app:** [PASTE-LIVE-LINK-HERE](https://creditwise-app-app-dcwxxnp6za9kb3pqfcs7gd.streamlit.app/)
+**Live app:** [LIVE-LINK](https://creditwise-app-app-dcwxxnp6za9kb3pqfcs7gd.streamlit.app/)
 
 ![App screenshot](PASTE-SCREENSHOT-HERE)
 
