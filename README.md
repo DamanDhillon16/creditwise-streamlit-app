@@ -4,7 +4,11 @@ A machine learning project that predicts whether a loan application will be appr
 
 **Live app:** [LIVE-LINK](https://creditwise-app-app-dcwxxnp6za9kb3pqfcs7gd.streamlit.app/)
 
-![App screenshot](PASTE-SCREENSHOT-HERE)
+<img width="1198" height="706" alt="image" src="https://github.com/user-attachments/assets/d9eb83d0-6e97-4b3e-ac6b-cb36a421d52b" />
+<img width="1098" height="822" alt="image" src="https://github.com/user-attachments/assets/eeb9b8cc-87a7-4781-92f5-5b38d563e82f" />
+<img width="1081" height="754" alt="image" src="https://github.com/user-attachments/assets/83630306-a19c-46ef-91f0-f24299a9d9d0" />
+
+
 
 ## Dataset
 
